@@ -16,4 +16,12 @@ Es la combinación de nuevos elementos de morkup o sintaxis. Estas nuevos elemen
 El markup HTML5 incorpora algunas etiquetas nuevas pensadas para hacer que la estructura de las paginas webs sean mas logicas y funcionales.
 
 ##Estructura de elementos
-    hola mundo!
+    <body>
+        <header>...</header>
+        <nav>...</nav>
+        <article>
+            <section>...</section>
+        </article>
+        <aside>...</aside>
+        <footer>...</footer>
+    </body>
