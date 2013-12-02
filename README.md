@@ -16,12 +16,12 @@ Es la combinación de nuevos elementos de morkup o sintaxis. Estas nuevos elemen
 El markup HTML5 incorpora algunas etiquetas nuevas pensadas para hacer que la estructura de las paginas webs sean mas logicas y funcionales.
 
 ### Nuevas reglas de semantica
-* No es necesario el cierre de las siguientes etiquetas:
+No es necesario el cierre de las siguientes etiquetas:
     /* DON'T */
-    <br />
-    <hr />
-    <img src=""... />
-    <input ... />
+<br />
+<hr />
+<img src=""... />
+<input ... />
 
 
 
