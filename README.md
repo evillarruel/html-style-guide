@@ -5,7 +5,7 @@ MercadoLibre HTML Style Guide
 
 
 ##HTML5
-Es la combinación de nuevos elementos de morkup o sintaxis. Estas nuevos elementos suponen herramientas más avanzadas, lo cual se traduce en mejores experiencias para el usuario final.
+Es la combinación de nuevos elementos de markup o sintaxis. Estas nuevos elementos suponen herramientas más avanzadas, lo cual se traduce en mejores experiencias para el usuario final.
 
 ###Ventajas de usar HTML5
 * Permite la carga mas rápida al ser más sencillo y simple el código.
@@ -42,35 +42,13 @@ El markup HTML5 incorpora algunas etiquetas nuevas pensadas para hacer que la es
 
 * Se puede usar tanto minúsculas como mayúsculas en el código.
 
-##Estructura de elementos
+##Nuevos elementos de HTML5
 ````html
-<article>
-<aside>
-<audio>
-<canvas>
-<command>
-<datalist>
-<details>
-<dialog>
-<embed>
-<figure>
-<footer>
-<header>
-<mark>
-<meter>
-<nav>
-<output>
-<progress>
-<ruby>
-<rp>
-<rt>
-<section>
-<source>
-<time>
-<video>
+<header> <nav> <article> <section> <aside> <footer> <audio> <canvas> <command> <datalist> <details> <dialog> <embed> <figure> <mark> <meter> <output> <progress> <ruby> <rp> <rt> <source> <time> <video>
 ````
 
 ##Estructura basica de elementos
+````html
     <body>
         <header>...</header>
         <nav>...</nav>
@@ -80,4 +58,4 @@ El markup HTML5 incorpora algunas etiquetas nuevas pensadas para hacer que la es
         <aside>...</aside>
         <footer>...</footer>
     </body>
-
+````
