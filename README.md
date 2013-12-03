@@ -22,16 +22,16 @@ El markup HTML5 incorpora algunas etiquetas nuevas pensadas para hacer que la es
 <!-- // DON'T -->
 <br />
 <hr />
-<img src='' .../>
-<input .../>
+<img src=''... />
+<input ... />
 ````
 
 ````html
-<!-- // DON'T -->
+<!-- // DO -->
 <br>
 <hr>
-<img src='' ...>
-<input ...>
+<img src=''... >
+<input ... >
 ````
 
 ##Estructura de elementos
