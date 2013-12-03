@@ -16,10 +16,10 @@ Es la combinación de nuevos elementos de morkup o sintaxis. Estas nuevos elemen
 El markup HTML5 incorpora algunas etiquetas nuevas pensadas para hacer que la estructura de las paginas webs sean mas logicas y funcionales.
 
 ### Nuevas reglas de semantica
-* No es necesario el cierre de las siguientes etiquetas:
+* No es necesario el cierre de las siguientes etiquetas
 
 ````html
-<!-- // DON'T -->
+<!-- DON'T -->
 <br />
 <hr />
 <img src=''... />
@@ -27,14 +27,50 @@ El markup HTML5 incorpora algunas etiquetas nuevas pensadas para hacer que la es
 ````
 
 ````html
-<!-- // DO -->
+<!-- DO -->
 <br>
 <hr>
 <img src=''... >
 <input ... >
 ````
 
+* La declaración del documento está completamente minimizada
+
+````html
+<!DOCTYPE html>
+````
+
+* Se puede usar tanto minúsculas como mayúsculas en el código.
+
 ##Estructura de elementos
+````html
+<article>
+<aside>
+<audio>
+<canvas>
+<command>
+<datalist>
+<details>
+<dialog>
+<embed>
+<figure>
+<footer>
+<header>
+<mark>
+<meter>
+<nav>
+<output>
+<progress>
+<ruby>
+<rp>
+<rt>
+<section>
+<source>
+<time>
+<video>
+````
+
+##Estructura basica de elementos
     <body>
         <header>...</header>
         <nav>...</nav>
