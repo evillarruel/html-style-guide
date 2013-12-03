@@ -9,8 +9,8 @@ Es la combinación de nuevos elementos de markup o sintaxis. Estas nuevos elemen
 
 ###Ventajas de usar HTML5
 * Permite la carga mas rápida al ser más sencillo y simple el código.
+* Añade etiquetas para manejar la semántica, permitiendo describir cual es el contenido
 * Permite interactuar e insertar directamente video y música sin utilizar flash.
-* El markup HTML5 es priorizado por los navegadores.
 
 ##Elementos
 El markup HTML5 incorpora algunas etiquetas nuevas pensadas para hacer que la estructura de las paginas webs sean mas logicas y funcionales.
@@ -49,13 +49,13 @@ El markup HTML5 incorpora algunas etiquetas nuevas pensadas para hacer que la es
 
 ##Estructura basica de elementos
 ````html
-    <body>
-        <header>...</header>
-        <nav>...</nav>
-        <article>
-            <section>...</section>
-        </article>
-        <aside>...</aside>
-        <footer>...</footer>
-    </body>
+<body>
+    <header>...</header>
+    <nav>...</nav>
+    <article>
+        <section>...</section>
+    </article>
+    <aside>...</aside>
+    <footer>...</footer>
+</body>
 ````
