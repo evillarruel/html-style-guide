@@ -37,17 +37,17 @@ El markup HTML5 incorpora algunas etiquetas nuevas pensadas para hacer que la es
 * La declaración del documento está completamente minimizada
 
 ````html
-<!DOCTYPE html>
+    <!DOCTYPE html>
 ````
 
 * Se puede usar tanto minúsculas como mayúsculas en el código.
 
-##Nuevos elementos de HTML5
+###Nuevos elementos de HTML5
 ````html
 <header> <nav> <article> <section> <aside> <footer> <audio> <canvas> <command> <datalist> <details> <dialog> <embed> <figure> <mark> <meter> <output> <progress> <ruby> <rp> <rt> <source> <time> <video>
 ````
 
-##Estructura basica de elementos
+###Estructura basica de elementos
 ````html
 <body>
     <header>...</header>
@@ -59,3 +59,10 @@ El markup HTML5 incorpora algunas etiquetas nuevas pensadas para hacer que la es
     <footer>...</footer>
 </body>
 ````
+
+###
+
+
+
+
+
