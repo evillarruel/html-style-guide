@@ -5,16 +5,16 @@ MercadoLibre HTML Style Guide
 
 
 ##HTML5
-Es la combinación de nuevos elementos de markup o sintaxis. Estas nuevos elementos suponen herramientas más avanzadas, lo cual se traduce en mejores experiencias para el usuario final.
+It’s the combination of new elements of markup or syntax. These elements suppose more advanced tools, which translates as better experiences for the user. 
 
-###Ventajas de usar HTML5
-* Permite la carga mas rápida al ser más sencillo y simple el código.
-* Añade etiquetas para manejar la semántica, completa y homogenea permitiendo describir cual es el contenido, su importancia y su finalidad. No tienen especial impacto en la visualización, se orientan a buscadores.
-* Permite una mejor indexación e interpretacion de la información.
-* Permite interactuar con elementos multimedia como audio y videos.
+###Advantages of use HTML5
+* As the code is simpler and plain, allows a faster load. 
+* Adds tags to handle semantics full and homogeneous, allowing  to describe which is the content, their importance and purpose. These tags have no particular impact on display and are orient to searchers. 
+* Allows better indexing and interpretation of information.
+* Allows to interact with multimedia elements like audio and video.
 
-### Nuevas reglas de semantica
-* No es necesario el cierre de las siguientes etiquetas.
+### New rules of semantics
+* Is not necessary to close the following tags.
 
 ````html
 <!-- DON'T -->
@@ -32,52 +32,51 @@ Es la combinación de nuevos elementos de markup o sintaxis. Estas nuevos elemen
 <input ... >
 ````
 
-* La declaración del documento está completamente minimizada
+* The document declaration is fully minimized.
 
 ````html
 <!-- DO -->
 <!DOCTYPE html>
 ````
 
-* Se puede usar tanto minúsculas como mayúsculas en el código.
+* Allows both lowercase and capital letters in the code.
 
-###Nuevos elementos de HTML5
-El markup HTML5 incorpora etiquetas nuevas para mejorar la semantica web, haciendo la estructura de la pagina mas logica y funcional.
+###New elements of HTML5
+The HTML5 markup incorporates some new tags designed to make web pages structure more logical and functional.
 
 ````html
 <header> <nav> <article> <section> <aside> <footer> <audio> <canvas> <command> <datalist> <details> <dialog> <embed> <figure> <mark> <meter> <output> <progress> <ruby> <rp> <rt> <source> <time> <video>
 ````
 ####Header
-Representa la cabecera de una sección, y es de suponer que se le dé más importancia que al resto, sobre todo si la sección es un artículo.
+Represents the header of a section, and it is assumed to be given more importance than the rest, especially if the section is an ítem.
 ````html
 <header>  
-    <h1>MercadoLibre - Donde compras y vendes de todo</h1>
+    <h1>MercadoLibre - Where you buy and sell everything</h1>
     <!-- Header content -->
 </header>
 ````
 
 ####Nav
-Representa una sección dedicada a la navegación entre el sitio, como la típica barra superior de los periódicos.
+Represents a section dedicated to the navigation of the site.
 ````html
-<!-- DON'T -->
+<!-- DON´T -->
 <div id="nav">
     <ul>
-        <li> <a .... /> </li>
+        <li><a href="#">Item of menu</a></li>
     </ul>
-</ul>
+</div>
 ````
 ````html
 <!-- DO -->
 <nav>
     <ul>
-        <li> <a href="/login/">Login</a> </li>
-        <li> <a href="/account/">My account</a> </li>
-        <li> <a href="/notification/">Notification</a> </li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="/about/">About</a></li>
     </ul>
 </nav>
 ````
 ####Article
-Permite declarar una parte del contenido auto-contenida, como las opiniones.
+Allows to declare a part of the content which is independent of this, such as reviews.
 ````html
 <!-- DO -->
 <article>
@@ -92,7 +91,7 @@ Permite declarar una parte del contenido auto-contenida, como las opiniones.
 </article>
 ````
 ####Section
-Representa una sección "general" dentro de un documento o aplicación. Puede contener subsecciones y si lo acompañamos de h1-h6 podemos estructurar mejor toda la página.
+Represents a general section inside a document or an application.  It can contain subsections and if we accompany with h1-h6 we could structure better the entire page.
 ````html
 <!-- DO -->
 <section>
@@ -102,7 +101,7 @@ Representa una sección "general" dentro de un documento o aplicación. Puede co
 ````
 
 ####Aside
-Representa un contenido que está muy poco relacionado con el resto de la página, como una barra lateral. Esencial para delimitar el contenido "importante" del contenido "de apoyo", haciendo más caso al primero que al segundo.
+Represents a content which is not much related to the rest of the page, as a sidebar. It is essential to define the “important content" from the “support content", giving more importance to the first that the second.
 
 ````html
 <!-- DO -->
@@ -117,7 +116,7 @@ Representa un contenido que está muy poco relacionado con el resto de la págin
 aside
 ````
 
-El contenido del elemento ```` aside ```` está directamente relacionada con el artículo.
+The content of the ```` aside ```` element is related directly with the article.
 ````html
 <!-- DO -->
 <article>
@@ -131,7 +130,7 @@ El contenido del elemento ```` aside ```` está directamente relacionada con el 
 </article>
 ````
 
-El elemento ```` aside ```` puede estar fuera del artículo. Su contenido está relacionado a la página, pero no tan estrechamente con el artículo.
+The ```` aside ````element can be out of the article. Its content is related to the page, but not so closely to the article.
 ````html
 <!-- DO -->
 <article>
@@ -149,7 +148,7 @@ El elemento ```` aside ```` puede estar fuera del artículo. Su contenido está 
 </aside>
 ````
 ####Footer
-Representa el pié de una sección, con información acerca de la página/sección que poco tiene que ver con el contenido de la página, como el autor, el copyright o el año.
+Represents the bottom of a section with information about the page/section that has little to do with the content itself but has data like the author, copyright or the year.
 
 ````html
 <!-- DON´T -->
@@ -172,7 +171,7 @@ Representa el pié de una sección, con información acerca de la página/secci�
     </ul>
 </footer>
 ````
-#####El footer dentro de otro elemento
+#####The footer inside another element
 ######Section
 ````html
 <!-- DO -->
@@ -195,27 +194,7 @@ Representa el pié de una sección, con información acerca de la página/secci�
 </article>
 ````
 
-###Nav
-Representa una sección dedicada a la navegación entre el sitio.
-````html
-<!-- DON´T -->
-<div id="nav">
-    <ul>
-        <li><a href="#">Item of menu</a></li>
-    </ul>
-</div>
-````
-````html
-<!-- DO -->
-<nav>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="/about/">About</a></li>
-    </ul>
-</nav>
-````
-
-###Estructura basica de elementos
+###Basic structure of elements
 ````html
 <!-- DO -->
 <body>
