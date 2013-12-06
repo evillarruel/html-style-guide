@@ -35,21 +35,15 @@ Es la combinación de nuevos elementos de markup o sintaxis. Estas nuevos elemen
 * La declaración del documento está completamente minimizada
 
 ````html
-<<<<<<< HEAD
 <!-- DO -->
 <!DOCTYPE html>
-=======
-    <!DOCTYPE html>
->>>>>>> f7abdbdcae581f9a351e0457e1c1d9a2ad3425f4
 ````
 
 * Se puede usar tanto minúsculas como mayúsculas en el código.
 
 ###Nuevos elementos de HTML5
-<<<<<<< HEAD
 El markup HTML5 incorpora etiquetas nuevas para mejorar la semantica web, haciendo la estructura de la pagina mas logica y funcional.
-=======
->>>>>>> f7abdbdcae581f9a351e0457e1c1d9a2ad3425f4
+
 ````html
 <header> <nav> <article> <section> <aside> <footer> <audio> <canvas> <command> <datalist> <details> <dialog> <embed> <figure> <mark> <meter> <output> <progress> <ruby> <rp> <rt> <source> <time> <video>
 ````
@@ -234,10 +228,5 @@ Representa una sección dedicada a la navegación entre el sitio.
     <footer>...</footer>
 </body>
 ````
-
-###
-hola mundo
-
-
-
-
+    
+    
