@@ -113,7 +113,6 @@ Represents a content which is not much related to the rest of the page, as a sid
         <li><a href="#">My Best Friend</a></li>
     </ul>
 </aside>
-aside
 ````
 
 The content of the ```` aside ```` element is related directly with the article.
