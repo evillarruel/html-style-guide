@@ -32,7 +32,7 @@ It’s the combination of new elements of markup or syntax. These elements suppo
 <input ... >
 ````
 
-* The document declaration is fully minimized.
+* Doctype
 
 ````html
 <!-- DO -->
@@ -41,12 +41,10 @@ It’s the combination of new elements of markup or syntax. These elements suppo
 
 * Allows both lowercase and capital letters in the code.
 
-###New elements of HTML5
+###Elements
 The HTML5 markup incorporates some new tags designed to make web pages structure more logical and functional.
+http://www.w3.org/TR/html5/dom.html#elements
 
-````html
-<header> <nav> <article> <section> <aside> <footer> <audio> <canvas> <command> <datalist> <details> <dialog> <embed> <figure> <mark> <meter> <output> <progress> <ruby> <rp> <rt> <source> <time> <video>
-````
 ####Header
 Represents the header of a section, and it is assumed to be given more importance than the rest, especially if the section is an ítem.
 ````html
