@@ -5,31 +5,24 @@ MercadoLibre HTML Style Guide
 
 
 ##HTML5
-It’s the combination of new elements of markup or syntax. These elements suppose more advanced tools, which translates as better experiences for the user. 
-
-###Advantages of use HTML5
-* As the code is simpler and plain, allows a faster load. 
-* Adds tags to handle semantics full and homogeneous, allowing  to describe which is the content, their importance and purpose. These tags have no particular impact on display and are orient to searchers. 
-* Allows better indexing and interpretation of information.
-* Allows to interact with multimedia elements like audio and video.
 
 ### New rules of semantics
 * Is not necessary to close the following tags.
 
 ````html
-<!-- DON'T -->
-<br />
-<hr />
-<img src=''... />
-<input ... />
-````
-
-````html
-<!-- DO -->
+<!-- DON'T USE IN MeLi -->
 <br>
 <hr>
 <img src=''... >
 <input ... >
+````
+
+````html
+<!-- DO -->
+<br />
+<hr />
+<img src=''... />
+<input ... />
 ````
 
 * Doctype
@@ -44,21 +37,46 @@ It’s the combination of new elements of markup or syntax. These elements suppo
 ###Elements
 The HTML5 markup incorporates some new tags designed to make web pages structure more logical and functional.
 http://www.w3.org/TR/html5/dom.html#elements
+*Always use the class of the element 
+*Use ARIA attribute
 
 ####Header
 Represents the header of a section, and it is assumed to be given more importance than the rest, especially if the section is an ítem.
+
+
 ````html
-<header>  
-    <h1>MercadoLibre - Where you buy and sell everything</h1>
+<header class="ml-header">  
+    <a href="http://www.mercadolibre.com.ar">
+        <h1 class="ml-logo">
+            MercadoLibre - Donde compras y vendes de todo
+        </h1>
+    </a>
     <!-- Header content -->
 </header>
 ````
 
-####Nav
-Represents a section dedicated to the navigation of the site.
+####Main
+The ```` <div> ```` with the class or id ```` main or content```` we replace by class ```` <main> ```` .
+
 ````html
 <!-- DON´T -->
-<div id="nav">
+<div id="main" role="main">
+    <!-- Content -->
+</div>
+````
+````html
+<!-- DO -->
+<main class="ml-main" role="main">
+    <!-- Content -->
+</main>
+````
+
+####Nav
+Represents a section dedicated to the navigation of the site.
+*Within the header
+````html
+<!-- DON´T -->
+<div>
     <ul>
         <li><a href="#">Item of menu</a></li>
     </ul>
@@ -66,7 +84,7 @@ Represents a section dedicated to the navigation of the site.
 ````
 ````html
 <!-- DO -->
-<nav>
+<nav class="ml-navigation" role="navigation">
     <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="/about/">About</a></li>
@@ -75,17 +93,23 @@ Represents a section dedicated to the navigation of the site.
 ````
 ####Article
 Allows to declare a part of the content which is independent of this, such as reviews.
+*Use in the Main
 ````html
 <!-- DO -->
-<article>
+<article class="review" itemprop="review" itemscope itemtype="http://schema.org/Review"
     <header>
-        <h4>
+        <h4 itemprop="name">
             Excellent product
         </h4>
-        by <a href="/user/...">USERNAME...</a>
-        <time datetime="2013-08-29T13:58Z">August 29th, 2013 at 13:58</time>
+        by <a href="/user/..." itemprop="author">USERNAME...</a>
+        <span class="reviewRating" itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
+            <meta itemprop="worstRating" content="1">
+            <span itemprop="ratingValue">5</span>
+            <meta itemprop="bestRating" content="5">
+        </span>
+        <time itemprop="datePublished" datetime="2013-08-29T13:58Z">August 29th, 2013 at 13:58</time>
     </header>
-    <p>Review content ...</p>
+    <p itemprop="description">Review content ...</p>
 </article>
 ````
 ####Section
@@ -93,13 +117,13 @@ Represents a general section inside a document or an application.  It can contai
 ````html
 <!-- DO -->
 <section>
-    <h1>Promotions</h1>
+    <h2>Promotions</h2>
     <p>Promo description</p>
 </section>
 ````
 
 ####Aside
-Represents a content which is not much related to the rest of the page, as a sidebar. It is essential to define the “important content" from the “support content", giving more importance to the first that the second.
+It is essential to define the “important content" from the “support content", giving more importance to the first that the second.
 
 ````html
 <!-- DO -->
@@ -117,11 +141,11 @@ The content of the ```` aside ```` element is related directly with the article.
 ````html
 <!-- DO -->
 <article>
-    <h1>My Blog Post</h1>
+    <h2>My Blog Post</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
     eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
     <aside>
-        <h1>Glossary</h1>
+        <h3>Glossary</h3>
         <p>ipsum dolor sit amet</p>
     </aside>
 </article>
@@ -131,12 +155,12 @@ The ```` aside ````element can be out of the article. Its content is related to 
 ````html
 <!-- DO -->
 <article>
-    <h1>Products Apple</h1>
+    <h2>Products Apple</h2>
     <p>The <b>apple</b> is the pomaceous fruit of the apple tree...</p>
     ...
 </article>
 <aside>
-    <h2>Oder products</h2>
+    <h3>Oder products</h3>
     <ul>
         <li><a href="#">AMD</a></li>
         <li><a href="#">Intel</a></li>
@@ -160,7 +184,7 @@ Represents the bottom of a section with information about the page/section that 
 
 ````html
 <!-- DO -->
-<footer>
+<footer class="ml-footer" role="contentinfo">
     <ul>
         <li>copyright</li>
         <li>More information</li>
@@ -195,13 +219,16 @@ Represents the bottom of a section with information about the page/section that 
 ````html
 <!-- DO -->
 <body>
-    <header>...</header>
-    <nav>...</nav>
-    <article>
-        <section>...</section>
-    </article>
-    <aside>...</aside>
-    <footer>...</footer>
+    <header class="ml-header">
+        <nav class="ml-navigation">...</nav>
+    </header>
+    <main class="ml-main" role="main">
+        <aside>...</aside>
+        <article>
+            <section>...</section>
+        </article>
+    </main>
+    <footer  class="ml-footer">...</footer>
 </body>
 ````
 
