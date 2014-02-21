@@ -151,7 +151,7 @@ The content of the ```` aside ```` element is related directly with the article.
 </article>
 ````
 
-The ```` aside ````element can be out of the article. Its content is related to the page, but not so closely to the article.
+The ```` aside ```` element can be out of the article. Its content is related to the page, but not so closely to the article.
 ````html
 <!-- DO -->
 <article>
@@ -231,6 +231,7 @@ Represents the bottom of a section with information about the page/section that 
     <footer  class="ml-footer">...</footer>
 </body>
 ````
+![Alt text](/files/structure-html5.png "Basic structure of elements in MeLi")
 
     
     
