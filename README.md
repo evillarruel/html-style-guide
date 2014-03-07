@@ -6,32 +6,6 @@ MercadoLibre HTML Style Guide
 
 ##HTML5
 
-### New rules of semantics
-* Is not necessary to close the following tags.
-
-````html
-<!-- DON'T USE IN MeLi -->
-<br>
-<hr>
-<img src=''... >
-<input ... >
-````
-
-````html
-<!-- DO -->
-<br />
-<hr />
-<img src=''... />
-<input ... />
-````
-
-* Doctype
-
-````html
-<!-- DO -->
-<!DOCTYPE html>
-````
-
 * Allows both lowercase and capital letters in the code.
 
 ###Elements
