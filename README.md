@@ -70,7 +70,7 @@ Allows to declare a part of the content which is independent of this, such as re
 *Use in the Main
 ````html
 <!-- DO -->
-<article class="review" itemprop="review" itemscope itemtype="http://schema.org/Review"
+<article class="review" itemprop="review" itemscope itemtype="http://schema.org/Review">
     <header>
         <h4 itemprop="name">
             Excellent product
