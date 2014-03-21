@@ -207,5 +207,13 @@ Represents the bottom of a section with information about the page/section that 
 ````
 ![Alt text](/files/structure-html5.png "Basic structure of elements in MeLi")
 
+#### Use HTML5 Shiv
+IE does not recognize the new HTML5 elements (article, section, etc.)
+````html
+<!-- The HTML5 Shiv (https://github.com/aFarkas/html5shiv) -->
+<!--[if lt IE 9]>
+    <script src="http://static.mlstatic.com/org-img/ch/vendor/html5shiv/html5shiv-3.7.0.js"></script>
+<![endif]-->
+````
     
     
