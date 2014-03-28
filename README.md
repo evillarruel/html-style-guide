@@ -40,7 +40,7 @@ The ```` <div> ```` with the class or id ```` main or content```` we replace by 
 ````
 ````html
 <!-- DO -->
-<main class="ml-main" role="main">
+<main role="main">
     <!-- Content -->
 </main>
 ````
