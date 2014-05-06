@@ -177,6 +177,12 @@ Represents a general section inside a document or an application.  It can contai
 It is essential to define the “important content" from the “support content", giving more importance to the first that the second.
 
 ````html
+<!-- DON´T -->
+<section class="main-content">
+    <article>...</article>
+</section>
+<section class="aux-content"></section>
+
 <!-- DO -->
 <aside>
     <span>Your purchase is protected. <a href="">See conditions</a>.</span>
