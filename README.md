@@ -27,7 +27,6 @@ The main goal of this guide is to set standards for writing our HTML, helping th
 
 (1) [Email guidelines](http://static.mlstatic.com/org-img//Manual/ManualEmails/index.html)
 
-> Reference
 >- [HTML5 Doctype article](http://ejohn.org/blog/html5-doctype/) (John Resig's Blog)
 >- [Fix Your Site With the Right DOCTYPE!](http://alistapart.com/article/doctype) (A list apart)
 
@@ -68,7 +67,7 @@ The main goal of this guide is to set standards for writing our HTML, helping th
 
 ```
 
--Write your attributes following this sintax: attribute:"value"
+- Write your attributes following this sintax: attribute:"value"
 ```html
 <!-- DON´T -->
 <input type="checkbox" name="myCheck" checked>
@@ -264,7 +263,7 @@ IE8 does not recognize the new HTML5 elements (article, section, etc.), so you m
 
 ## Links
 
-The <a> tag defines a hyperlink, the most important attribute of the <a> element is the href attribute.
+The ```<a>``` tag defines a hyperlink, the most important attribute of the ```<a>``` element is the href attribute.
 
 - The link don't have auto close tag
 ```html
@@ -327,7 +326,6 @@ and prevent event on click this
 
 
 
-> Reference
 > http://www.htmlquick.com/es/reference/tags/a.html
 > http://www.htmlquick.com/es/reference/mime-types.html
 > http://www.htmlquick.com/es/reference/types.html#frame-target
