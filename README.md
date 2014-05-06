@@ -27,11 +27,9 @@ The main goal of this guide is to set standards for writing our HTML, helping th
 
 (1) [Email guidelines](http://static.mlstatic.com/org-img//Manual/ManualEmails/index.html)
 
-> Related articles:
-
-> - [HTML5 Doctype article](http://ejohn.org/blog/html5-doctype/) (John Resig's Blog)
-
-> - [Fix Your Site With the Right DOCTYPE!](http://alistapart.com/article/doctype) (A list apart)
+> Reference
+>- [HTML5 Doctype article](http://ejohn.org/blog/html5-doctype/) (John Resig's Blog)
+>- [Fix Your Site With the Right DOCTYPE!](http://alistapart.com/article/doctype) (A list apart)
 
 [Go to index](#index) 
 
@@ -85,7 +83,6 @@ The main goal of this guide is to set standards for writing our HTML, helping th
 ## New HTML5 markup tags
 
 The HTML5 markup incorporates some new tags designed to make web pages structure more logical and functional.
-http://www.w3.org/TR/html5/dom.html#elements
 
 
 ####Header
@@ -252,6 +249,9 @@ Represents the bottom of a section with information about the page/section that 
 ````
 ![Alt text](/files/structure-html5.png "Basic structure")
 
+> [HTML5 elements] (http://www.w3.org/TR/html5/dom.html#elements)
+
+
 ### HTML5 support for IE8
 IE8 does not recognize the new HTML5 elements (article, section, etc.), so you must include the HTML5 Shiv script as shown below, if you want to support IE8:
 ````html
@@ -327,7 +327,7 @@ and prevent event on click this
 
 
 
-> #### Source:
+> Reference
 > http://www.htmlquick.com/es/reference/tags/a.html
 > http://www.htmlquick.com/es/reference/mime-types.html
 > http://www.htmlquick.com/es/reference/types.html#frame-target
