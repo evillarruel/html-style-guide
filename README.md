@@ -1,7 +1,7 @@
 ## Intro
 The main goal of this guide is to set standards for writing our HTML, helping the readability and maintainability of our code. By doing this, we can significantly reduce the time required to understand any front-end implementation.
 
-## Index por Table
+## Table of contents
 
 - [Doctype](#doctype)
 - [HTML Syntax](#syntax)
@@ -25,7 +25,7 @@ The main goal of this guide is to set standards for writing our HTML, helping th
 ```
 
 
-> (1) [Email guidelines](http://static.mlstatic.com/org-img//Manual/ManualEmails/index.html)
+(1) [Email guidelines](http://static.mlstatic.com/org-img//Manual/ManualEmails/index.html)
 
 > Related articles:
 
@@ -33,7 +33,7 @@ The main goal of this guide is to set standards for writing our HTML, helping th
 
 > - [Fix Your Site With the Right DOCTYPE!](http://alistapart.com/article/doctype) (A list apart)
 
-> [Go back to Style guide index](#index) 
+[Go to index](#index) 
 
 
 ## Syntax
@@ -79,7 +79,7 @@ The main goal of this guide is to set standards for writing our HTML, helping th
 <input type="checkbox" name="myCheck" checked="checked">
 ```
 
-> [Go back to Style guide index](#index) 
+[Go to index](#index) 
 
 
 ## New HTML5 markup tags
@@ -260,7 +260,7 @@ IE8 does not recognize the new HTML5 elements (article, section, etc.), so you m
     <script src="http://static.mlstatic.com/org-img/ch/vendor/html5shiv/html5shiv-3.7.0.js"></script>
 <![endif]-->
 ````
-> [Go back to Style guide index](#index) 
+[Go to index](#index) 
 
 ## Links
 
@@ -327,19 +327,19 @@ and prevent event on click this
 
 
 
-#### Source:
-http://www.htmlquick.com/es/reference/tags/a.html
-http://www.htmlquick.com/es/reference/mime-types.html
-http://www.htmlquick.com/es/reference/types.html#frame-target
-http://stackoverflow.com/questions/11009597/correct-implementation-of-anchor-tag
-http://line25.com/articles/10-html-tag-crimes-you-really-shouldnt-commit
-http://stackoverflow.com/questions/134845/href-attribute-for-javascript-links-or-javascriptvoid0
-http://moz.com/learn/seo/anchor-text
-http://www.w3.org/TR/html4/types.html#h-6.16
-http://stackoverflow.com/questions/4964130/target-blank-vs-target-new
-http://www.w3.org/html/wg/drafts/html/master/Overview.html
+> #### Source:
+> http://www.htmlquick.com/es/reference/tags/a.html
+> http://www.htmlquick.com/es/reference/mime-types.html
+> http://www.htmlquick.com/es/reference/types.html#frame-target
+> http://stackoverflow.com/questions/11009597/correct-implementation-of-anchor-tag
+> http://line25.com/articles/10-html-tag-crimes-you-really-shouldnt-commit
+> http://stackoverflow.com/questions/134845/href-attribute-for-javascript-links-or-javascriptvoid0
+> http://moz.com/learn/seo/anchor-text
+> http://www.w3.org/TR/html4/types.html#h-6.16
+> http://stackoverflow.com/questions/4964130/target-blank-vs-target-new
+> http://www.w3.org/html/wg/drafts/html/master/Overview.html
 
-> [Go back to Style guide index](#index) 
+[Go to index](#index) 
 
 ## Forms
 
@@ -590,7 +590,7 @@ name: <input type="text">
 *[http://www.tutorialspoint.com/html5/](http://www.tutorialspoint.com/html5/)*
 *[http://html5doctor.com/](http://html5doctor.com/)*
 
-> [Go back to Style guide index](#index) 
+> [Go to index](#index) 
 
 
 ## Lists
@@ -666,4 +666,4 @@ Result
 ···· ···· 1 vendido
 
 
-> [Go back to Style guide index](#index) 
+[Go to index](#index) 
