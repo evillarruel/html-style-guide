@@ -1,13 +1,7 @@
-MercadoLibre HTML Style Guide
-================
+## Intro
+The main goal of this guide is to set standards for writing our HTML, helping the readability and maintainability of our code. By doing this, we can significantly reduce the time required to understand any front-end implementation.
 
-This style guide will guide you follow through the standards of the code used among our web pages. If you notice that some important info is missing, or you want to contribute with it, just let us know.
-
-## Overview
-
-The main goal of this style guide is to provide comprehensive guidelines to write valid, robust, and semantic html.
-
-## Index
+## Index por Table
 
 - [Doctype](#doctype)
 - [HTML Syntax](#syntax)
@@ -18,24 +12,20 @@ The main goal of this style guide is to provide comprehensive guidelines to writ
 
 ## Doctype
 
-- We use HTML5 across all our pages EXCEPT for emails(1), so when coding html for our sites always use HTML5 doctype: 
+- Use HTML5 doctype across all our pages EXCEPT for emails(1)
 
 ```html
 <!-- DON'T -->
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-(XHTML 1.0 Transitional doctype)
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-(HTML 4.01 Transitional doctype)
 
 <!-- DO -->
-
 <!DOCTYPE html>
-(HTML5 doctype)
 ```
 
 
-> (1) Find email guidelines [here](http://static.mlstatic.com/org-img//Manual/ManualEmails/index.html)
+> (1) [Email guidelines](http://static.mlstatic.com/org-img//Manual/ManualEmails/index.html)
 
 > Related articles:
 
@@ -43,33 +33,29 @@ The main goal of this style guide is to provide comprehensive guidelines to writ
 
 > - [Fix Your Site With the Right DOCTYPE!](http://alistapart.com/article/doctype) (A list apart)
 
-
-
 > [Go back to Style guide index](#index) 
+
 
 ## Syntax
 
-- We use XHTML syntax to ensure well formed code and backwards compatibility. 
+- Use XHTML syntax to ensure well formed code and backwards compatibility. 
 
+- Use small caps for html tags attributes and everything else, EXCEPT doctype
 ```html
 <!-- DON´T -->
-
-<!-- You must not use mixed caps for tags names or attributes. -->
 <iNPut ... />
 
-<!-- HTML tags must be always closed -->
-<br> 
-
-<!-- Avoid the boolean attribute syntax -->
-<input type="checkbox" name="myCheck" checked>
-
-
 <!-- DO -->
-
-<!-- Use small caps for html tags attributes and everything else, EXCEPT doctype -->
 <input ....>
 
-<!-- Close your html elements. ALWAYS -->
+```
+
+- Close your html elements. ALWAYS
+```html
+<!-- DON´T -->
+<br> 
+
+<!-- DO -->
 <br />
 
 <img src="myimage.png" alt="myimage" />
@@ -82,9 +68,17 @@ The main goal of this style guide is to provide comprehensive guidelines to writ
 
 <textarea>My text here</textarea>
 
-<!-- Write your attributes following this sintax: attribute:"value" -->
+```
+
+-Write your attributes following this sintax: attribute:"value"
+```html
+<!-- DON´T -->
+<input type="checkbox" name="myCheck" checked>
+
+<!-- DO -->
 <input type="checkbox" name="myCheck" checked="checked">
 ```
+
 > [Go back to Style guide index](#index) 
 
 
@@ -92,11 +86,10 @@ The main goal of this style guide is to provide comprehensive guidelines to writ
 
 The HTML5 markup incorporates some new tags designed to make web pages structure more logical and functional.
 http://www.w3.org/TR/html5/dom.html#elements
-*Always use the class of the element 
-*Use ARIA attribute
+
 
 ####Header
-Represents the header of a section, and it is assumed to be given more importance than the rest, especially if the section is an ítem.
+Represents the header of a section, and it is assumed to be given more importance than the rest, especially if the section is an item.
 
 
 ````html
@@ -141,30 +134,32 @@ Represents a section dedicated to the navigation of the site.
 <!-- DO -->
 <nav class="ml-navigation" role="navigation">
     <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="/about/">About</a></li>
+        <li><a href="#">Item of menu</a></li>
     </ul>
 </nav>
+
+<nav class="ml-navigation" role="navigation">
+    <a href="#">Item of menu</a>
+</nav>
+
 ````
 ####Article
 Allows to declare a part of the content which is independent of this, such as reviews.
 *Use in the Main
 ````html
 <!-- DO -->
-<article class="review" itemprop="review" itemscope itemtype="http://schema.org/Review">
+<article class="review">
     <header>
-        <h4 itemprop="name">
+        <h4>
             Excellent product
         </h4>
-        by <a href="/user/..." itemprop="author">USERNAME...</a>
-        <span class="reviewRating" itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
-            <meta itemprop="worstRating" content="1">
-            <span itemprop="ratingValue">5</span>
-            <meta itemprop="bestRating" content="5">
+        by <a href="/user/...">USERNAME...</a>
+        <span class="reviewRating">
+            5
         </span>
-        <time itemprop="datePublished" datetime="2013-08-29T13:58Z">August 29th, 2013 at 13:58</time>
+        <time datetime="2013-08-29T13:58Z">August 29th, 2013 at 13:58</time>
     </header>
-    <p itemprop="description">Review content ...</p>
+    <p>Review content ...</p>
 </article>
 ````
 ####Section
@@ -175,6 +170,11 @@ Represents a general section inside a document or an application.  It can contai
     <h2>Promotions</h2>
     <p>Promo description</p>
 </section>
+
+<section>
+    <section>Promotions 1</section>
+    <section>Promotions 2</section>
+</section>
 ````
 
 ####Aside
@@ -183,46 +183,10 @@ It is essential to define the “important content" from the “support content"
 ````html
 <!-- DO -->
 <aside>
-    <h2>Blogroll</h2>
-    <ul>
-        <li><a href="#">My Friend</a></li>
-        <li><a href="#">My Other Friend</a></li>
-        <li><a href="#">My Best Friend</a></li>
-    </ul>
+    <span>Your purchase is protected. <a href="">See conditions</a>.</span>
 </aside>
 ````
 
-The content of the ```` aside ```` element is related directly with the article.
-````html
-<!-- DO -->
-<article>
-    <h2>My Blog Post</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-    eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    <aside>
-        <h3>Glossary</h3>
-        <p>ipsum dolor sit amet</p>
-    </aside>
-</article>
-````
-
-The ```` aside ```` element can be out of the article. Its content is related to the page, but not so closely to the article.
-````html
-<!-- DO -->
-<article>
-    <h2>Products Apple</h2>
-    <p>The <b>apple</b> is the pomaceous fruit of the apple tree...</p>
-    ...
-</article>
-<aside>
-    <h3>Oder products</h3>
-    <ul>
-        <li><a href="#">AMD</a></li>
-        <li><a href="#">Intel</a></li>
-        ...
-    </ul>
-</aside>
-````
 ####Footer
 Represents the bottom of a section with information about the page/section that has little to do with the content itself but has data like the author, copyright or the year.
 
@@ -239,7 +203,7 @@ Represents the bottom of a section with information about the page/section that 
 
 ````html
 <!-- DO -->
-<footer class="ml-footer" role="contentinfo">
+<footer>
     <ul>
         <li>copyright</li>
         <li>More information</li>
@@ -270,25 +234,25 @@ Represents the bottom of a section with information about the page/section that 
 </article>
 ````
 
-###Basic structure of elements
+###An example of the basic structure of an html
 ````html
 <!-- DO -->
 <body>
-    <header class="ml-header">
-        <nav class="ml-navigation">...</nav>
+    <header>
+        <nav>...</nav>
     </header>
-    <main class="ml-main" role="main">
+    <main>
         <aside>...</aside>
         <article>
             <section>...</section>
         </article>
     </main>
-    <footer  class="ml-footer">...</footer>
+    <footer>...</footer>
 </body>
 ````
-![Alt text](/files/structure-html5.png "Basic structure of elements in MeLi")
+![Alt text](/files/structure-html5.png "Basic structure")
 
-### Support for IE8
+### HTML5 support for IE8
 IE8 does not recognize the new HTML5 elements (article, section, etc.), so you must include the HTML5 Shiv script as shown below, if you want to support IE8:
 ````html
 <!-- The HTML5 Shiv (https://github.com/aFarkas/html5shiv) -->
@@ -298,91 +262,55 @@ IE8 does not recognize the new HTML5 elements (article, section, etc.), so you m
 ````
 > [Go back to Style guide index](#index) 
 
-## Anchors
+## Links
 
-### Description
-* Defines an anchor and can be used as a link to another document, such as a marker, or both.
+The <a> tag defines a hyperlink, the most important attribute of the <a> element is the href attribute.
 
-
-### Attributes
-<a href="#href">`href`</a>
-<a href="#title">`title`</a>
-<a href="#id">`id`</a>
-<a href="#name">`name`</a>
-<a href="#class">`class`</a>
-<a href="#target">`target`</a>
-<a href="#type">`type`</a>
-<a href="#rel">`rel`</a>
-
-
-### Basic implementation
-Specific `href` and `title` attributes
-```html
-<a href="https://github.com/mercadolibre/html-style-guide" title="Go to html style guide" >html-style-guide</a>
-```
-
-### Implementing data attributes
-```html
-<a href="http://url.original" data-some-data="sting-data" title="link with data attr"></a>
-```
-
-### Good Practices
-Anchors don't have auto close tag
+- The link don't have auto close tag
 ```html
 <!-- DON'T -->
 <a href="url" title="title-text" />
-```
 
-```html
 <!-- DO -->
 <a href="url" title="title-text"></a>
 ```
 
-<a name="title"></a>
-Always specific a title attribute
+- Always specific a title attribute
 ```html
 <!-- DON'T -->
 <a href="url"></a>
-```
 
-```html
 <!-- DO -->
 <a href="url" title=""></a>
 ```
 
-Never use other element if you want link any info
+- Never use other element if you want link any info
 ```html
 <!-- DON'T -->
 <span id="link" onclick="window.open('url')" ></span>
-```
 
-```html
 <!-- DO -->
 <a href="url" title="title-link" target="_blank"></a>
 ```
 
-Always define a url and prevent it from javascript
+- Always define a url and prevent it from javascript
 ```html
 <!-- DON'T -->
 <a href="javscript:void();" ></a>
-```
 
-```html
 <!-- DO -->
 <a href="http://www.url.bla" title="title-link"></a>
 and prevent event on click this
 ```
 
-<a name="id"></a>
-Link info inside our content example
+- Link info inside our content example
 ```html
 <a href="#idReference" title="Go to Reference">Go to Reference</a>
 (...our html content...)
 <section id="idReference"></section>
-```
-Or
-<a name="name"></a>
-```html
+
+<!-- Or -->
+
 <a href="#nameReference" title="Go to Reference">Go to Reference</a>
 (...our html content...)
 <a name="nameReference"></a>
@@ -391,11 +319,6 @@ Or
 
 
 ### Attributes description
-
-#### Target
-<span id="target"></span>
-
-######Possible values
 
 * `_blank` - *Open linked document in new windows or tab*
 * `_self` - *It's a default, open linked document in the same context*
