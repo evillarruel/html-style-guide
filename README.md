@@ -184,6 +184,7 @@ It is essential to define the “important content" from the “support content"
 <section class="aux-content"></section>
 
 <!-- DO -->
+<section class="content"> </section>
 <aside>
     <span>Your purchase is protected. <a href="">See conditions</a>.</span>
 </aside>
