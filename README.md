@@ -1,43 +1,48 @@
-## Intro
-The main goal of this guide is to set standards for writing our HTML, helping the readability and maintainability of our code. By doing this, we can significantly reduce the time required to understand any front-end implementation.
+MercadoLibre HTML Style Guide
+================
+## Overview
 
-## Table of contents
+The main goal of this style guide is to provide comprehensive guidelines to write valid, robust, and semantic html.
+
+## Table of Contents
 
 - [Doctype](#doctype)
 - [HTML Syntax](#syntax)
 - [New HTML5 markup tags](#new-html5-markup-tags)
-- [Anchors](#anchors)
+- [Links](#links)
 - [Forms](#forms)
 - [Lists](#lists)
 
 ## Doctype
 
-- Use HTML5 doctype across all our pages EXCEPT for emails(1)
+- Use HTML5 doctype across all our pages EXCEPT for emails(1): 
 
 ```html
-<!-- DON'T -->
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-
 <!-- DO -->
+
 <!DOCTYPE html>
+(HTML5 doctype)
 ```
 
 
-(1) [Email guidelines](http://static.mlstatic.com/org-img//Manual/ManualEmails/index.html)
+> (1) Find email guidelines [here](http://static.mlstatic.com/org-img//Manual/ManualEmails/index.html)
 
->- [HTML5 Doctype article](http://ejohn.org/blog/html5-doctype/) (John Resig's Blog)
->- [Fix Your Site With the Right DOCTYPE!](http://alistapart.com/article/doctype) (A list apart)
+> Related articles:
 
-[Go to index](#index) 
+> - [HTML5 Doctype article](http://ejohn.org/blog/html5-doctype/) (John Resig's Blog)
 
+> - [Fix Your Site With the Right DOCTYPE!](http://alistapart.com/article/doctype) (A list apart)
+
+
+
+> [Go back to Summary](#table-of-contents) 
 
 ## Syntax
 
-- Use XHTML syntax to ensure well formed code and backwards compatibility. 
+- Use XHTML syntax to ensure well formed code and backwards compatibility.
 
 - Use small caps for html tags attributes and everything else, EXCEPT doctype
+
 ```html
 <!-- DON´T -->
 <iNPut ... />
@@ -48,9 +53,10 @@ The main goal of this guide is to set standards for writing our HTML, helping th
 ```
 
 - Close your html elements. ALWAYS
+
 ```html
 <!-- DON´T -->
-<br> 
+<br>
 
 <!-- DO -->
 <br />
@@ -68,6 +74,7 @@ The main goal of this guide is to set standards for writing our HTML, helping th
 ```
 
 - Write your attributes following this sintax: attribute:"value"
+
 ```html
 <!-- DON´T -->
 <input type="checkbox" name="myCheck" checked>
@@ -76,7 +83,7 @@ The main goal of this guide is to set standards for writing our HTML, helping th
 <input type="checkbox" name="myCheck" checked="checked">
 ```
 
-[Go to index](#index) 
+[Go back to summary](#table-of-contents)
 
 
 ## New HTML5 markup tags
@@ -266,41 +273,26 @@ IE8 does not recognize the new HTML5 elements (article, section, etc.), so you m
     <script src="http://static.mlstatic.com/org-img/ch/vendor/html5shiv/html5shiv-3.7.0.js"></script>
 <![endif]-->
 ````
-[Go to index](#index) 
+[Go back to summary](#table-of-contents)
 
 ## Links
+
+#### Anchors
 
 The ```<a>``` tag defines a hyperlink, the most important attribute of the ```<a>``` element is the href attribute.
 
 - The link don't have auto close tag
-```html
-<!-- DON'T -->
-<a href="url" title="title-text" />
-
-<!-- DO -->
-<a href="url" title="title-text"></a>
-```
-
 - Always specific a title attribute
+- Never use other element if you want link any info
+- Always define a url and prevent it from javascript
+
 ```html
 <!-- DON'T -->
-<a href="url"></a>
+<a href="url" />
 
-<!-- DO -->
-<a href="url" title=""></a>
-```
-
-- Never use other element if you want link any info
-```html
 <!-- DON'T -->
 <span id="link" onclick="window.open('url')" ></span>
 
-<!-- DO -->
-<a href="url" title="title-link" target="_blank"></a>
-```
-
-- Always define a url and prevent it from javascript
-```html
 <!-- DON'T -->
 <a href="javscript:void();" ></a>
 
@@ -310,6 +302,7 @@ and prevent event on click this
 ```
 
 - Link info inside our content example
+
 ```html
 <a href="#idReference" title="Go to Reference">Go to Reference</a>
 (...our html content...)
@@ -323,34 +316,35 @@ and prevent event on click this
 <section id="reference"></section>
 ```
 
+#### Links
 
-### Attributes description
+The ```<link>``` tag it's a void element and specifies relationships between the current document and external resource. This Element is most used, for example, to link to style sheets.
 
-* `_blank` - *Open linked document in new windows or tab*
-* `_self` - *It's a default, open linked document in the same context*
-* `_parent` - *Open linked document in the parent frame*
-* `_top` - *Open linked document in the top level of current context frame*
+_Basic code_
+```html
+<link href="http://url" type="text/css" rel="stylesheet" media="screen" />
+```
+- `href` - specifies the URL of the linked resource
+- `type` - defined the type (MIME type) of the content that has been linked
+- `rel` - names a relationship between the linked document and the current document
+- `media` - specifies the media which the linked resource applies to. Its value must be a _media types and groups_ in HTML4, and extend thist o any kind of _media queries_ in HTML5
 
+> - [MIME types](http://www.htmlquick.com/es/reference/mime-types.html)
+> - [Anchor attibutes](http://www.htmlquick.com/es/reference/tags/a.html)
+> - [`target` values](http://www.w3.org/TR/html4/types.html#h-6.16)
+> - [Anchors bad implementeation examples](http://line25.com/articles/10-html-tag-crimes-you-really-shouldnt-commit)
+> - [SEO - anchor](http://moz.com/learn/seo/anchor-text)
+> - [Link attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link)
+> - [`rel` link_types](https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types)
+> - [`media` values](http://www.w3schools.com/tags/att_link_media.asp)
 
-
-> http://www.htmlquick.com/es/reference/tags/a.html
-> http://www.htmlquick.com/es/reference/mime-types.html
-> http://www.htmlquick.com/es/reference/types.html#frame-target
-> http://stackoverflow.com/questions/11009597/correct-implementation-of-anchor-tag
-> http://line25.com/articles/10-html-tag-crimes-you-really-shouldnt-commit
-> http://stackoverflow.com/questions/134845/href-attribute-for-javascript-links-or-javascriptvoid0
-> http://moz.com/learn/seo/anchor-text
-> http://www.w3.org/TR/html4/types.html#h-6.16
-> http://stackoverflow.com/questions/4964130/target-blank-vs-target-new
-> http://www.w3.org/html/wg/drafts/html/master/Overview.html
-
-[Go to index](#index) 
+[Go back to summary](#table-of-contents)
 
 ## Forms
 
 ### Generic FORM example
 
-#### _Code_
+#### _Basic code_
 ```html
 <form action="/processData.php" method="post">
     <fieldset>
@@ -360,19 +354,11 @@ and prevent event on click this
             <input id="firstName" name="firstname" type="text">
         </div>
         <div>
-            <label for="lastName">Last name:</label>
-            <input id="lastName" name="lastname" type="text">
-        </div>
-        <div>
             <label for="male">Sex:</label>
             <input id="male" name="sex" value="male" type="radio">
             <label for="male">Male</label>
             <input id="female" name="sex" value="female" type="radio">
             <label for="female">Female</label>
-        </div>
-        <div>
-            <label for="birthDate">Birth date:</label>
-            <input id="birthDate" name="birthdate" type="date">
         </div>
     </fieldset>
     <fieldset>
@@ -382,33 +368,12 @@ and prevent event on click this
             <input id="someInfo" name="someinfo" type="text">
         </div>
         <div>
-            <label for="selectEg">Select example:</label>
-            <select id="selectEg" name="selecteg">
-                <option>option 1</option>
-                <option>option 2</option>
-                <option>option 3</option>
-                <optgroup label="optgroup 1">
-                    <option>option 4.1</option>
-                    <option>option 4.2</option>
-                    <option>option 4.3</option>
-                </optgroup>
-                <option>option 5</option>
-                <option>option 6</option>
-                <optgroup label="optgroup 2 disabled" disabled><!-- In XHTML, attribute minimization is forbidden, and the disabled attribute must be defined as <optgroup disabled="disabled"> -->
-                    <option>option 7.1</option>
-                    <option>option 7.2</option>
-                    <option>option 7.3</option>
-                    <option>option 7.4</option>
-                </optgroup>
-            </select>
-        </div>
-        <div>
-            <input id="check1" name="checkbox1" value="example1" type="checkbox">
             <label for="check1">checkbox 1:</label>
-            <input id="check2" name="checkbox2" value="example2" type="checkbox">
+            <input id="check1" name="checkbox1" value="example1" type="checkbox">
             <label for="check2">checkbox 2:</label>
-            <input id="check3" name="checkbox3" value="example4" type="checkbox">
+            <input id="check2" name="checkbox2" value="example2" type="checkbox">
             <label for="check3">checkbox 3:</label>
+            <input id="check3" name="checkbox3" value="example4" type="checkbox">
         </div>
     </fieldset>
     <fieldset>
@@ -418,7 +383,6 @@ and prevent event on click this
     </fieldset>
 </form>
 ```
-
 
 ### New attributes
 
@@ -435,7 +399,9 @@ __Inputs__
 * `formmethod` - A *String* define which method (get/post) should be used when submitting. __It overrides the form method__, if defined. *(only applies for type image or submit, when the form attribute has been set)*
 * `formaction` - A *String* define the URI should be used to processes the information. __It overrides the form action__, if defined. *(only applies for type image or submit, when the form attribute has been set)*
 
-[Check Browser Compatibility of this feature](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#Browser_compatibility)
+>- _[html5doctor](http://html5doctor.com/html5-forms-introduction-and-new-attributes/#attributes)_
+>- _[w3c](http://www.w3.org/TR/html5/forms.html)_
+>- _[Check Browser Compatibility of this feature](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#Browser_compatibility)_
 
 ### New attributes values
 
@@ -595,7 +561,7 @@ name: <input type="text">
 *[http://www.tutorialspoint.com/html5/](http://www.tutorialspoint.com/html5/)*
 *[http://html5doctor.com/](http://html5doctor.com/)*
 
-> [Go to index](#index) 
+> [Go back to summary](#table-of-contents)
 
 
 ## Lists
@@ -614,7 +580,7 @@ Used to list information that does not require a particular order.
 Eg. List of payment methods.
 
 html structure
-```
+```html
 <ul>
   <li>MercadoPago<li>
   <li>Efectivo<li>
@@ -652,7 +618,7 @@ This list is recommended for use when the information has a relevant title or co
 It has a title `<dt>` and description `<dd>`.
 
 html structure
-```
+```html
 <dl>
     <dt>Tipo de artículo:</dt>
        <dd>Artículo nuevo</dd>
@@ -670,5 +636,86 @@ Result
 
 ···· ···· 1 vendido
 
+### Good practices
 
-[Go to index](#index) 
+- Use lists to create lists, don`t use other elements to this purpose
+
+```html
+<!-- DON'T -->
+<ul>
+    <!-- simple link -->
+    <li>
+        <a href="#">...</a>
+    </li>
+    <li>
+        <!-- Breadcrumb  -->
+        <span>... &gt;</span>
+        <span>... &gt;</span>
+        <span>... &gt;</span>
+        <span>...</span>
+    </li>
+</ul>
+```
+```html
+<!-- DO -->
+<div>
+    <!-- simple link -->
+    <a href="#">...</a>
+    <ul>
+        <!-- Breadcrumb -->
+        <li>...</li>
+        <li>...</li>
+        <li>...</li>
+        <li>...</li>
+    <ul>
+</div>
+```
+
+- Using the correct type of list, according to the needs of the information
+
+```html
+<!-- DON'T -->
+<ul>
+    <li>
+        <span class="title">...</span>
+        <span class="data">...</span>
+    </li>
+    <li>
+        <span class="title"></span>
+        <span class="data"></span>
+    </li>
+</ul>
+```
+```html
+<!-- DO -->
+<dl>
+    <dt>...<dt>
+    <dd>...</dd>
+    <dt>...<dt>
+    <dd>...</dd>
+</dl>
+```
+
+```html
+<!-- DON'T -->
+<ul>
+    <li>
+        <span class="num">1</span>
+        ...
+    </li>
+    <li>
+        <span class="num">2</span>
+        ...
+    </li>
+<ul>
+```
+```html
+<!-- DO -->
+<ol>
+    <li>...</li>
+    <li>...</li>
+<ol>
+```
+
+
+[Go back to summary](#table-of-contents)
